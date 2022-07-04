@@ -12,14 +12,12 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Test
-      script:
-          - echo 'test'
-          - ./test.sh
+        script:
+            - echo 'test'
+            - ./test.sh
 
 
 
