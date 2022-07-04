@@ -10,14 +10,10 @@ on:
     branches: [ "main" ]
 
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test
-        script:
-            - echo 'test'
-            - ./test.sh
+job:
+    script:
+      - echo 'test'
+      - ./test.sh
 
 
 
