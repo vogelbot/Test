@@ -9,6 +9,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
+jobs:
+  test:
+      stage: test
+      script:
+          - echo 'test'
+          - ./test.sh
+
+
 # jobs:
 #   build:
 
@@ -39,18 +47,18 @@ on:
 #         run: echo "${ steps.read_file.outputs.contents }"
 
 
-jobs:
-  file_contents:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
+# jobs:
+#   file_contents:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v1
 
-      - name: Read file contents
-        id: read_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: "package.json"
+#       - name: Read file contents
+#         id: read_file
+#         uses: andstor/file-reader-action@v1
+#         with:
+#           path: "package.json"
 
-      - name: File contents
-        run: echo "${ steps.read_file.outputs.contents }"
+#       - name: File contents
+#         run: echo "${ steps.read_file.outputs.contents }"
