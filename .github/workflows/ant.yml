@@ -30,4 +30,7 @@ jobs:
     - name: Hello world!
       run: 
         echo "Hello world"
-        ls
+    - name: Read file contents
+      uses: andstor/file-reader-action@v1
+      with:
+        path: "stuff/file.txt"
