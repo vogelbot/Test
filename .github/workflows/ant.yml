@@ -24,8 +24,9 @@ on:
 jobs:
     script:
       runs-on: ubuntu-latest
-      - echo 'test'
-      - ./test.sh
+      steps:
+        - echo 'test'
+        - ./test.sh
 
 
 
