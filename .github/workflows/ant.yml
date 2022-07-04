@@ -31,6 +31,9 @@ jobs:
       run: 
         echo "Hello world"
     - name: Read file contents
+      id: read_file
       uses: andstor/file-reader-action@v1
       with:
-        path: "stuff/file.txt"
+        path: "./stuff/file.txt"
+    - name: File contents
+        run: echo "${ steps.read_file.outputs.contents }"
