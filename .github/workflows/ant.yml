@@ -28,4 +28,6 @@ jobs:
         fetch-depth: 2
     - run: git checkout HEAD^
     - name: Hello world!
-      run: echo "Hello world"
+      run: 
+        echo "Hello world"
+        ls
