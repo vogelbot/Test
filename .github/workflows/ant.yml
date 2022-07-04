@@ -23,5 +23,9 @@ jobs:
         distribution: 'temurin'
     # - name: Build with Ant
     #   run: ant -v
-    - name: 
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
+    - run: git checkout HEAD^
+    - name: Hello world!
       run: echo "Hello world"
